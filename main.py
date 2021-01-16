@@ -74,7 +74,7 @@ if __name__ == "__main__":
     CUSUM(bit_string, Mode.BACKWARD)
     CUSUM(bit_string, Mode.FORWARD)
 
-    string generated with numpy randint
+    # string generated with numpy randint
     random_array = numpy.random.randint(2, size=(100,)).tolist()
     random_bit_string = "".join(map(str, random_array))
     print('Example 3: \n For bit string: \n' + random_bit_string + '\n of length: ' + str(
