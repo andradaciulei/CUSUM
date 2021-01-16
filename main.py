@@ -68,7 +68,7 @@ def is_valid_inserted_bit_string(input):
 if __name__ == "__main__":
     # example given by NIST
     bit_string = '1100100100001111110110101010001000100001011010001100001000110100110001001100011001100010100010111000'
-    print('Example 3: \n For bit string: \n' + bit_string + '\n of length: ' + str(
+    print('Example 1: \n For bit string: \n' + bit_string + '\n of length: ' + str(
         len(bit_string)) + '\n when running CUSUM test we obtain:')
 
     CUSUM(bit_string, Mode.BACKWARD)
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     # string generated with numpy randint
     random_array = numpy.random.randint(2, size=(100,)).tolist()
     random_bit_string = "".join(map(str, random_array))
-    print('Example 3: \n For bit string: \n' + random_bit_string + '\n of length: ' + str(
+    print('Example 2: \n For bit string: \n' + random_bit_string + '\n of length: ' + str(
         len(random_bit_string)) + '\n when running CUSUM test we obtain:')
 
     CUSUM(random_bit_string, Mode.FORWARD)
