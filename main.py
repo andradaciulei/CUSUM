@@ -58,7 +58,7 @@ def CUSUM(epsilon, mode):
         print('Because P-value=' + str(P_value) + '<0.01 => sequence is NOT random')
 
 
-def validate_inserted_bit_string(input):
+def is_valid_inserted_bit_string(input):
     for bit in input:
         if bit not in ['0', '1']:
             return False
@@ -83,8 +83,9 @@ if __name__ == "__main__":
     CUSUM(random_bit_string, Mode.FORWARD)
     CUSUM(random_bit_string, Mode.BACKWARD)
 
+    #testing with a random bit string insterted by the user
     inserted_bit_string = input("Please enter a string:\n")
-    while not validate_inserted_bit_string(inserted_bit_string):
+    while not is_valid_inserted_bit_string(inserted_bit_string):
         print("The inserted string is not a bit string, please provide another input")
         inserted_bit_string = input("Please enter a string:\n")
 
